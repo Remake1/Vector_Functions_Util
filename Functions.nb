@@ -1,0 +1,61 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{RowBox[{"ResourceFunction","[","\"TangentVector\"","]"}],"[",RowBox[
+{RowBox[{"{",RowBox[{"t",",",RowBox[{"cos",RowBox[{"(","t",")"}]}],",",RowBox[{"sin",RowBox[
+{"(","t",")"}]}]}],"}"}],","," ","t"}],"]"}],"\n",RowBox[{"CloudDeploy","[","\n"," ",RowBox[
+{RowBox[{"APIFunction","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"\"x\""," ","\[Rule]"," ","\"String\""}],",",RowBox[
+{"\"y\""," ","\[Rule]"," ","\"String\""}],","," ",RowBox[{"\"z\""," ","\[Rule]"," ","\"String\""}]}]," ","}"}],","," ",RowBox[
+{RowBox[{RowBox[{"ResourceFunction","[","\"TangentVector\"","]"}],"[",RowBox[{RowBox[
+{"{",RowBox[{RowBox[{"ToExpression","[","#x","]"}],",",RowBox[{"ToExpression","[","#y","]"}],",",RowBox[
+{"ToExpression","[","#z","]"}]}],"}"}],","," ","t"}],"]"}]," ","&"}],","," ","\"JPEG\""}],"]"}],","," ","\"tangent\""}],"]"}]}],
+"Input",CellLabel -> "In[41]:= ",ExpressionUUID -> "23cdb529-9ea9-45de-afdf-dbf382e94249"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{FractionBox["1",SqrtBox[RowBox[{"1","+",SuperscriptBox["cos",
+"2"],"+",SuperscriptBox["sin","2"]}]]],",",FractionBox["cos",SqrtBox[RowBox[{"1","+",SuperscriptBox[
+"cos","2"],"+",SuperscriptBox["sin","2"]}]]],",",FractionBox["sin",SqrtBox[RowBox[
+{"1","+",SuperscriptBox["cos","2"],"+",SuperscriptBox["sin","2"]}]]]}],"}"}],StandardForm],
+"Output",CellLabel -> "Out[41]= ",ExpressionUUID -> "d7482994-1bcc-4cf0-a96c-a5b2f2bd656e"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"CloudObject","[",TemplateBox[{"\"https://www.wolframcloud.com/obj/karbongames7/tangent\"","https://www.wolframcloud.com/obj/karbongames7/tangent"},
+"HyperlinkURL"],"]"}],CloudObject["https://www.wolframcloud.com/obj/karbongames7/tangent"],
+SelectWithContents -> True],StandardForm],"Output",CellLabel -> "Out[42]= ",ExpressionUUID -> "da12c08b-12f2-4841-8364-b72eb7bfebe0"]},
+Open],ExpressionUUID -> "d418c4a2-94e2-402e-92ec-d9b7f6574086"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"CloudDeploy","[","\n"," ",RowBox[{RowBox[{"APIFunction","[",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{"\"x\""," ","\[Rule]"," ","\"String\""}],",",RowBox[
+{"\"y\""," ","\[Rule]"," ","\"String\""}],","," ",RowBox[{"\"z\""," ","\[Rule]"," ","\"String\""}],",","  ",RowBox[
+{"\"t\""," ","\[Rule]"," ","\"String\""}]}]," ","}"}],","," ",RowBox[{RowBox[{RowBox[
+{"ResourceFunction","[","\"NormalVector\"","]"}],"[",RowBox[{RowBox[{"{",RowBox[{RowBox[
+{"ToExpression","[","#x","]"}],",",RowBox[{"ToExpression","[","#y","]"}],",",RowBox[
+{"ToExpression","[","#z","]"}]}],"}"}],","," ",RowBox[{"ToExpression","[","#t","]"}]}],"]"}]," ","&"}],","," ","\"JPEG\""}],"]"}],","," ","\"normal\""}],"]"}]],
+"Input",CellLabel -> "In[51]:= ",ExpressionUUID -> "ad290a0e-1c67-4a49-9853-7011994d7701"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"CloudObject","[",TemplateBox[{"\"https://www.wolframcloud.com/obj/karbongames7/normal\"","https://www.wolframcloud.com/obj/karbongames7/normal"},
+"HyperlinkURL"],"]"}],CloudObject["https://www.wolframcloud.com/obj/karbongames7/normal"],
+SelectWithContents -> True],StandardForm],"Output",CellLabel -> "Out[51]= ",ExpressionUUID -> "5165ffcb-754f-407f-8148-a367c82203d2"]},
+Open],ExpressionUUID -> "605ee533-9891-475e-ae1a-38dba57cf1f7"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{RowBox[{"ResourceFunction","[","\"TangentVector\"","]"}],"[",RowBox[
+{RowBox[{"{",RowBox[{"t",",",RowBox[{"cos",RowBox[{"(","t",")"}]}],",",RowBox[{"sin",RowBox[
+{"(","t",")"}]}]}],"}"}],","," ","t"}],"]"}],"\n",RowBox[{"CloudDeploy","[","\n"," ",RowBox[
+{"APIFunction","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"\"x\""," ","\[Rule]"," ","\"String\""}],",",RowBox[
+{"\"y\""," ","\[Rule]"," ","\"String\""}],","," ",RowBox[{"\"z\""," ","\[Rule]"," ","\"String\""}]}]," ","}"}],","," ",RowBox[
+{RowBox[{RowBox[{"ResourceFunction","[","\"TangentVector\"","]"}],"[",RowBox[{RowBox[
+{"{",RowBox[{RowBox[{"ToExpression","[","#x","]"}],",",RowBox[{"ToExpression","[","#y","]"}],",",RowBox[
+{"ToExpression","[","#z","]"}]}],"}"}],","," ","t"}],"]"}]," ","&"}],","," ","\"JPEG\""}],"]"}],"]"}]}],
+"Input",CellLabel -> "In[52]:= ",ExpressionUUID -> "94a3ba91-4de9-49cd-819d-111671548925"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{FractionBox["1",SqrtBox[RowBox[{"1","+",SuperscriptBox["cos",
+"2"],"+",SuperscriptBox["sin","2"]}]]],",",FractionBox["cos",SqrtBox[RowBox[{"1","+",SuperscriptBox[
+"cos","2"],"+",SuperscriptBox["sin","2"]}]]],",",FractionBox["sin",SqrtBox[RowBox[
+{"1","+",SuperscriptBox["cos","2"],"+",SuperscriptBox["sin","2"]}]]]}],"}"}],StandardForm],
+"Output",CellLabel -> "Out[52]= ",ExpressionUUID -> "7964b78d-3c08-4e84-b61a-aecb92ca1091"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"CloudObject","[",TemplateBox[{"\"https://www.wolframcloud.com/obj/83dfa5b7-4b11-47f5-b13c-73687403669f\"","https://www.wolframcloud.com/obj/83dfa5b7-4b11-47f5-b13c-73687403669f"},
+"HyperlinkURL"],"]"}],CloudObject["https://www.wolframcloud.com/obj/83dfa5b7-4b11-47f5-b13c-73687403669f"],
+SelectWithContents -> True],StandardForm],"Output",CellLabel -> "Out[53]= ",ExpressionUUID -> "485ac28b-444e-469f-b0c2-1a6307a6481e"]},
+Open],ExpressionUUID -> "b1d03bb8-ae32-4fce-a70d-b6e669a5dfe1"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.1 for Wolfram Cloud 1.69.0.1 (September 4, 2024)",TaggingRules -> Association[
+"TryRealOnly" -> False]]

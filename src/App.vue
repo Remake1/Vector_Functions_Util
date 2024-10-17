@@ -22,9 +22,23 @@
     </div>
 
     <div class="output">
-      <h4>Curvature(κ) at T</h4>
+      <h4>Curvature(κ): </h4>
       <div v-if="store.curvatureImageUrl">
         <img :src="store.curvatureImageUrl" alt="Curvature result" />
+      </div>
+    </div>
+
+    <div class="output">
+      <h4>Tangent vector(T): </h4>
+      <div v-if="store.tangentImageUrl">
+        <img :src="store.tangentImageUrl" alt="Curvature result" />
+      </div>
+    </div>
+
+    <div class="output">
+      <h4>Norma vector(N): </h4>
+      <div v-if="store.normalImageUrl">
+        <img :src="store.normalImageUrl" alt="Curvature result" />
       </div>
     </div>
 
