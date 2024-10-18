@@ -10,6 +10,8 @@ export const useGlobalStore = defineStore('global', () => {
     const zFunction = ref('');
     const T = ref('');
 
+    const isLoading = ref(false);
+
     // Images
     const graphUrl = ref(null);
     const curvatureImageUrl = ref(null);
@@ -18,7 +20,7 @@ export const useGlobalStore = defineStore('global', () => {
 
     // Wolfram API
     const appId = 'GQT55A-U4UWAJL2U5';
-    const url = 'https://cors-anywhere.herokuapp.com/https://api.wolframalpha.com/v2/query';
+    const url = 'https://api.wolframalpha.com/v2/query';
 
 
     // Math input tools
@@ -88,7 +90,7 @@ export const useGlobalStore = defineStore('global', () => {
 
     // Tangent
     const getTangent = async () => {
-        const tangentURL = `https://www.wolframcloud.com/obj/83dfa5b7-4b11-47f5-b13c-73687403669f?x=${xFunction.value}&y=${yFunction.value}&z=${zFunction.value}`;
+        const tangentURL = `https://www.wolframcloud.com/obj/4927b95e-322d-44be-ac3e-41309e7600dc?x=${xFunction.value}&y=${yFunction.value}&z=${zFunction.value}&t=${T.value}`;
 
         try {
             const response = await axios.get(tangentURL,
@@ -96,29 +98,31 @@ export const useGlobalStore = defineStore('global', () => {
 
             tangentImageUrl.value = window.URL.createObjectURL(response.data);
         } catch (error) {
-            console.error('Error fetching curvature:', error.message);
+            console.error('Error fetching tangent:', error.message);
         }
     }
 
     // Normal
     const getNormal = async () => {
-        const tangentURL = `https://www.wolframcloud.com/obj/karbongames7/normal?x=${xFunction.value}&y=${yFunction.value}&z=${zFunction.value}&t=${T.value}`;
+        const normalUrl = `https://www.wolframcloud.com/obj/25a5fc55-ad26-4993-a783-799e6fdf26da?x=${xFunction.value}&y=${yFunction.value}&z=${zFunction.value}&t=${T.value}`;
 
         try {
-            const response = await axios.get(tangentURL,
+            const response = await axios.get(normalUrl,
                 { responseType: 'blob', headers: { 'Accept': 'image/jpeg' }});
 
             normalImageUrl.value = window.URL.createObjectURL(response.data);
         } catch (error) {
-            console.error('Error fetching curvature:', error.message);
+            console.error('Error fetching normal:', error.message);
         }
     }
 
     const handleSubmit = async () => {
+        isLoading.value = true;
         await fetchGraph();
         await getCurvature();
         await getTangent();
         await getNormal();
+        isLoading.value = false;
     }
 
     return {
@@ -131,6 +135,7 @@ export const useGlobalStore = defineStore('global', () => {
         tangentImageUrl,
         normalImageUrl,
         fetchGraph,
-        handleSubmit
+        handleSubmit,
+        isLoading
     };
 })
