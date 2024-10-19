@@ -20,7 +20,7 @@ export const useGlobalStore = defineStore('global', () => {
 
     // Wolfram API
     const appId = 'GQT55A-U4UWAJL2U5';
-    const url = 'https://api.wolframalpha.com/v2/query';
+    const url = 'https://proxy.cors.sh/https://api.wolframalpha.com/v2/query';
 
 
     // Math input tools
@@ -43,11 +43,14 @@ export const useGlobalStore = defineStore('global', () => {
 
         await axios
             .get(url, {
+                headers: {
+                    'x-cors-api-key': 'temp_73eb653c2f3f71f6c699078bbc66c70a'
+                },
                 params: {
                     input: query,
                     appid: appId,
                     output: 'JSON',
-                },
+                }
             })
             .then(response => {
                 const result = response.data.queryresult;
@@ -68,11 +71,14 @@ export const useGlobalStore = defineStore('global', () => {
 
         try {
             const response = await axios.get(url, {
+                headers: {
+                    'x-cors-api-key': 'temp_73eb653c2f3f71f6c699078bbc66c70a'
+                },
                 params: {
                     input: query,
                     appid: appId,
                     output: 'JSON',
-                },
+                }
             });
 
             const result = response.data.queryresult;
