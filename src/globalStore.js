@@ -20,7 +20,7 @@ export const useGlobalStore = defineStore('global', () => {
 
     // Wolfram API
     const appId = 'GQT55A-U4UWAJL2U5';
-    const url = 'https://corsproxy.io/?https://api.wolframalpha.com/v2/query';
+    const url = 'https://api.wolframalpha.com/v2/query';
 
 
     // Math input tools
